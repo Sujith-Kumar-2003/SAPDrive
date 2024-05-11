@@ -1,0 +1,28 @@
+<div class="container">
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="brand">SAPDrive</span>
+    <span class="example-spacer"></span>
+
+  </mat-toolbar>
+
+  <div class="table-container">
+    <table class="booking-table">
+      <tbody class="scrollable-body">
+        <tr *ngFor="let timeSlot of timeSlots; let i = index">
+          <td class="side">{{ timeSlot }}
+            <div class="tooltip" *ngIf="availabilityMatrix[i][0] === 1">{{ 'Booked' }}</div>
+          </td>
+          <td *ngFor="let bay of [].constructor(10); let j = index" id="{{ 'cell-' + i + '-' + j }}"
+            class="{{ availabilityMatrix[i][j] === 0 ? 'available' : 'booked' }}"
+            [title]="availabilityMatrix[i][j] === 1 ? timeSlot + ' - Booked' : ''">
+            {{ typeMatrix[i][j] === '' ? 'Bay ' + (j + 1) : typeMatrix[i][j] }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

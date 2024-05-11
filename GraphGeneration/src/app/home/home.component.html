@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container-fluid {
+      height: 80vh;
+      margin-top: 01px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: stretch;
+    }
+
+    .container-box {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      padding: 30px;
+      background-color: #007bff;
+      border-radius: 15px;
+      color: #ffffff;
+    }
+
+    .rectangle {
+      height: 10px;
+      width: 25%;
+      margin: 15px;
+      background-color: #ffffff;
+      display: inline-block;
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
+    p {
+      font-weight: bold;
+      margin: 10px 0;
+      font-size: 1.2em;
+      white-space: nowrap;
+    }
+
+    .number {
+      font-size: 1.5em;
+      white-space: nowrap;
+    }
+
+    /* Removed box shadow */
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="container-top container-box">
+          <div class="rectangle left"></div>
+          <p>Revenue Generated<br><span class="number">1,016,050</span></p>
+          <div class="rectangle right"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="container-top container-box">
+          <div class="rectangle left"></div>
+          <p>Revenue Lost<br><span class="number">1,742,550</span></p>
+          <div class="rectangle right"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="container-bottom container-box">
+          <div class="rectangle left"></div>
+          <p>Vehicles Accepted<br><span class="number">4,099</span></p>
+          <div class="rectangle right"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="container-bottom container-box">
+          <div class="rectangle left"></div>
+          <p>Vehicles Turned-Away<br><span class="number">5,901</span></p>
+          <div class="rectangle right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<div class="app" style="background-color: #ffffff; color: #000000; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 bg-primary p-2">
+                <a routerLink="/" class="text-white text-decoration-none">
+                    <span class="fs-4 title">SAPDrive</span>
+                </a>
+            </div>
+        </div>
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 bg-dark">
+                <div class="d-flex flex-column text-white min-vh-100">
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center" id="menu">
+
+                        <li>
+                            <a routerLink="/" class="nav-link align-middle">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <span class="d-none d-sm-inline"> Home </span>
+                            </a>
+                        </li>
+                        <li class="divider" role="separator"></li>
+                        <li>
+                            <a href="#barchart" data-bs-toggle="collapse" class="nav-link align-middle">
+                                <i class="fa fa-align-left"  aria-hidden="true"></i>
+                                <span class="d-none d-sm-inline"> BAR CHARTS </span>
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <ul class="collapse nav flex-column submenu" id="barchart" data-bs-parent="#menu"  routerLinkActive="show" (isActiveChange)="activeChange($event)" #menuLinks>
+                                <li class="w-100">
+                                    <a routerLink="/bar-chart-category-axis/" class="nav-link px-0" routerLinkActive="active">
+                                        <span class="d-none d-sm-inline">Bar Chart </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="divider" role="separator"></li>
+                        <li>
+                            <a href="#piechart" data-bs-toggle="collapse" class="nav-link align-middle">
+                                <i class="fa fa-pie-chart"  aria-hidden="true"></i>
+                                <span class="d-none d-sm-inline"> PIE CHARTS </span>
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <ul class="collapse nav flex-column submenu" id="piechart" data-bs-parent="#menu"  routerLinkActive="show" (isActiveChange)="activeChange($event)" #menuLinks>
+                                <li class="w-100">
+                                    <a routerLink="/pie-chart-index-data-label/" class="nav-link px-0" routerLinkActive="active">
+                                        <span class="d-none d-sm-inline">Pie Chart</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="divider" role="separator"></li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+            <div class="col py-3 mt-5">
+                <div class="container" style="min-height: 500px; background-color: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); color: #000000;">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
